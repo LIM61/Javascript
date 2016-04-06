@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lianzheng Mu</title>
+    
+    <script type="text/javascript">
+        function myFunction() {
+            var placeholderValue = document.getElementById("inputField").placeholder;
+            var valueEntered = document.getElementById("inputField").value;
+            if (placeholderValue === valueEntered) {
+                document.getElementById("play").removeAttribute("disabled");
+            }
+            else {
+                if (!document.getElementById("play").hasAttribute("disabled")) {
+                    document.getElementById("play").setAttribute("disabled", "disabled")
+                }
+
+            }
+
+        }
+        setInterval(function () {
+            var placeholderValue = document.getElementById("inputField").placeholder;
+            var valueEntered = document.getElementById("inputField").value;
+            if (placeholderValue === valueEntered) {
+                document.getElementById("play").removeAttribute("disabled");
+            }
+            else {
+                if (!document.getElementById("play").hasAttribute("disabled")) {
+                    document.getElementById("play").setAttribute("disabled", "disabled")
+                }
+
+            }
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    <form>
+    <input type="text" placeholder="Lianzheng" id="inputField" onkeyup="myFunction()" onkeydown="myFunction()">
+    <input type="submit" name="play" disabled="disabled" id="play" value="play">
+    </form>
+</body>
+</html>
